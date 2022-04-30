@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 一般都不会允许页面在手机上能双指放大缩小，所以要修改默认meta，打开淘宝手机端，刷新页面，找到head里最长的那句mata，复制outerHTML -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <title>前航 - 前端导航网站</title>
+    <link rel="stylesheet" href="style.315cff3a.css">
+  </head>
+  <body>
+    <!-- 高端程序员直接用header \ main标签，低端程序员用div.header。 而此刻 我想当一个高端的程序员 :) -->
+    <!-- CSS不要写很多死高度，除非是必要的，否则不要写，这是一个非常非常不好的习惯！！！ -->
+    <!-- site表示整个网站的，全局的 -->
+    <header class="globalHeader">
+      <!--  action的值去百度随便搜索一个关键词，复制问号之前的路径，问号后面的只是查询参数而已 -->
+      <form class="searchForm" method="get" action="https://www.baidu.com/s">
+        <!-- action="https://www.baidu.com/s 结合 input添加name=wd 就能开启输入啥就搜啥的骚操作，你自己去百度搜jessica，认真看看人家的网址链接，/s之后是不是wd=jessica，百度网址就是这样的格式。 -->
+        <input name="wd" type="text">
+        <button type="submit">搜索</button>
+      </form>
+    </header>
+    <main class="globalMain">
+      <ul class="siteList">
+        <!-- 新增网站因为不知道用户会输入什么，所以要监听事件，这里采用JQuery监听：1、打开bootcdn.cn； 2、输入jQuery，找到最新版本的min.js的网址。将网址引用放到自己的main.js文件的前面 -->
+        <li class="last">
+          <div class="addButton">
+            <!-- logo表示标志，icon就只是个图标 -->
+            <div class="icon-wrapper">
+              <!-- 从iconfont复制过来的代码里有aria-hidden="true"，这可以不要 -->
+              <svg class="icon">
+                <use xlink:href="#icon-add"></use>
+              </svg>
+            </div>
+            <div class="text">新增网站</div>
+          </div>
+        </li>
+      </ul>
+    </main>
+
+    <!-- 使用淘宝iconfont的方法：1、将图标加入购物车； 2、打开购物车，添加至项目，新建或加入项目； 3、选择symbol，生成并复制代码； 4、将代码插入到自己的html里，最好添加在JS文件的前面； 5、打开iconfont的使用帮助，划到symbol引用； 6、按照步骤操作。注意，#icon-xxx这个名字在项目里复制； 7、如果有新增的icon，就把项目最新代码更新进来 -->
+    <script src="//at.alicdn.com/t/font_3366938_knqunid1b4.js"></script>
+    <!-- 使用jQuery监听新增网站的时间 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="main.e4121098.js"></script>
+  </body>
+</html>
